@@ -1,0 +1,57 @@
+*****************************problem1******************************************
+Output:
+Aurelio De Rosa
+John Doe
+
+
+
+code:
+var fullname = 'John Doe';
+var obj = {
+ fullname: 'Colin Ihrig',
+ prop: {
+    fullname: 'Aurelio De Rosa',
+    getFullname: function() {
+       return this.fullname;
+    }
+ }
+};
+
+console.log(obj.prop.getFullname()); //this line represents current instance of the object based on the function
+
+var test = obj.prop.getFullname;
+
+console.log(test());// this line calls test variable
+
+
+
+*******************************problem2*****************************************
+
+import java.util.Scanner;
+
+public class Starcase {
+
+		    public static void main(String[] args) {
+
+		        Scanner sc = new Scanner(System.in);
+		        System.out.println("enter number");
+		        int num  = Integer.parseInt(sc.nextLine());
+		        for(int j=0;j<num;j++){
+		            for(int i=1;i<=num;i++){
+		                System.out.print(i<num-j?" ":"#");
+		            }
+		            System.out.println("");
+		        }
+
+		    }
+		}
+Output:
+
+enter number
+6
+     #
+    ##
+   ###
+  ####
+ #####
+######
